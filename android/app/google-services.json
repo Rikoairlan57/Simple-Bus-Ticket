@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "235951990500",
+    "project_id": "bus-auth-daa2b",
+    "storage_bucket": "bus-auth-daa2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235951990500:android:26cc26a803d270087aaef1",
+        "android_client_info": {
+          "package_name": "com.example.bus_ticket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235951990500-6r3tbqd11ni9n066dsnqf02pm2v6km0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEfff7H6H6oTAWCu_UyKTBZPp1Zc-X1mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235951990500-6r3tbqd11ni9n066dsnqf02pm2v6km0v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
