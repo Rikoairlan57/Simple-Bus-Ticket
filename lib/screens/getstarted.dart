@@ -21,7 +21,7 @@ class GetStarted extends StatelessWidget {
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage("https://i.ibb.co/74zHyKc/pexels-vh-s-2377915.jpg"),
+                        image: AssetImage("assets/images/getstarted.jpg"),
                         fit: BoxFit.fill,
                       ),
                     ),

@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:bus_ticket/screens/bantuan_screen.dart';
 import 'package:bus_ticket/screens/bus_screen.dart';
+import 'package:bus_ticket/screens/informasi_screen.dart';
+import 'package:bus_ticket/screens/lokasi_screen.dart';
+import 'package:bus_ticket/screens/tentang_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '/model/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -60,39 +64,39 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: EdgeInsets.all(20),
                     child: ElevatedButton(
-                      child: Text("Jadwal"),
+                      child: Text("Bantuan"),
                       onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) => AlertDialog(
-                              title: Center(
-                                child: Text("Jadwal"),
-                              ),
-                              content: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("1.  29/6/2022 Jakarta - Surabaya 14.30",
-                                      style: TextStyle(fontSize: 15)),
-                                  Text("2.  29/6/2022 Surabaya - Jakarta 9.30",
-                                      style: TextStyle(fontSize: 15)),
-                                  Text(
-                                      "3.  29/6/2022 Jakarta - Jogyakarta 10.00",
-                                      style: TextStyle(fontSize: 15)),
-                                  Text("4.  29/6/2022 Bandung - Surabaya 08.30",
-                                      style: TextStyle(fontSize: 15)),
-                                  Text("5.  29/6/2022 Jakarta - Surabaya 11.30",
-                                      style: TextStyle(fontSize: 15)),
-                                ],
-                              ),
-                              actions: [
-                                TextButton(
-                                  child: Text("OK"),
-                                  onPressed: () => Navigator.pop(context),
-                                )
-                              ]),
-                        );
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => BantuanScreen()));
+                      },
+                      style:
+                          ElevatedButton.styleFrom(minimumSize: Size(113, 40)),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: ElevatedButton(
+                      child: Text("informasi"),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => InformasiScreen()));
+                      },
+                      style:
+                          ElevatedButton.styleFrom(minimumSize: Size(120, 40)),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: ElevatedButton(
+                      child: Text("Lokasi"),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LokasiScreen()));
                       },
                       style:
                           ElevatedButton.styleFrom(minimumSize: Size(120, 40)),
@@ -101,23 +105,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: EdgeInsets.all(20),
                     child: ElevatedButton(
-                      child: Text("About Me"),
+                      child: Text("Tentang"),
                       onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) => AlertDialog(
-                              title: Center(
-                                child: Text("About me"),
-                              ),
-                              content: Text(
-                                  "ini adalah applikasi pemesanan tiket bus secara online"),
-                              actions: [
-                                TextButton(
-                                  child: Text("Ok"),
-                                  onPressed: () => Navigator.pop(context),
-                                )
-                              ]),
-                        );
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => TentangScreen()));
                       },
                       style:
                           ElevatedButton.styleFrom(minimumSize: Size(120, 40)),
